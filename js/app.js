@@ -35,8 +35,18 @@ function fechayhora(){
 }
 
 function azulbtn(){
-    let vAzul = document.getElementById("btnAzul");
-    
+    let vAzul = document.getElementById("titulo");
+    vAzul.className = "text-center azul";
+}
+
+function rosabtn(){
+    let vRosa = document.getElementById("titulo");
+    vRosa.className = "text-center rosa";
+}
+
+function verdebtn(){
+    let vVerd = document.getElementById("titulo");
+    vVerd.className = "text-center verde";
 }
 
 

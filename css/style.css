@@ -20,11 +20,11 @@ p {
 }
 
 .azul{
-    text-shadow: 0 0 5px #6247f7,
-    0 0 10px #6247f7,
-    0 0 10px #6247f7,
-    0 0 10px #6247f7,
-    0 0 20px #6247f7;
+    text-shadow: 0 0 5px #1f33e7,
+    0 0 10px #1f33e7,
+    0 0 10px #1f33e7,
+    0 0 10px #1f33e7,
+    0 0 20px #1f33e7;
 }
 .verde{
     text-shadow: 0 0 5px #21e78b,
@@ -39,7 +39,7 @@ p {
 
 }
 .btnazul{
-    background-color: #6247f7;
+    background-color: #1f33e7;
 }
 .btnverde{
     background-color:#21e78b ;
