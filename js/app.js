@@ -1,15 +1,44 @@
-let fecha = new Date();
-console.log(fecha.getMonth());  // 0 - 11 , 0 -> enero
-console.log(fecha.getDay()); // 1 a 31
-console.log(fecha.getDate()); // 0 al 6 , 0 -> domingo
+function fechayhora(){
 
-let semanas = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabados'];
+    let fecha = new Date();
+    // console.log(fecha.getMonth());  // 0 - 11 , 0 -> enero
+    // console.log(fecha.getDay()); // 1 a 31
+    // console.log(fecha.getDate()); // 0 al 6 , 0 -> domingo
+    
+    let semanas = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    
+    let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    
+    let fechaReloj = document.getElementById("fecha");
+    // console.log(fechaReloj)
+    fechaReloj.innerHTML = `${semanas[fecha.getDay()]} ${fecha.getDate()} de ${meses[fecha.getMonth()]} del ${fecha.getFullYear()} `;
+    
+    // creo las variables para trabajar la hora
+    let hora = fecha.getHours();
+    let minutos = fecha.getMinutes();
+    let segundos = fecha.getSeconds();
 
-let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    if(hora < 10 ){
+        hora = '0' + hora;
+    }
 
-let fechaReloj = document.getElementById("fecha");
-console.log(fechaReloj)
-fechaReloj.innerHTML = `${semanas[fecha.getDay()]}`
+    if (minutos < 10 ){
+        minutos = '0' + minutos;        
+    }
+
+    if (segundos < 10 ){ 
+        segundos = '0' + segundos;
+    }
+    
+    let horaReloj = document.getElementById("hora");
+    horaReloj.innerHTML = `${hora}:${minutos}:${segundos}`;
+}
+
+function azulbtn(){
+    let vAzul = document.getElementById("btnAzul");
+    
+}
 
 
-
+// invocar el reloj cada segundos
+setInterval(fechayhora, 1000);
